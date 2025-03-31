@@ -1,0 +1,215 @@
+/*@import "tailwindcss";
+/*
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+:root {
+  --neon-cyan: #6ee7b7;
+  --cyber-purple: #ff19c6;
+  --hologram-blue: #3b82f6;
+  --matrix-green: #00ff88;
+  --cyberpunk-orange: #ff6b35;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Space Grotesk", sans-serif;
+  background: #ff0000;
+  color: #f3f4f6;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Cyber Glow 2.0 
+.glow-text {
+  text-shadow: 0 0 12px rgba(255, 255, 255, 0.9),
+               0 0 4px var(--neon-cyan);
+}
+
+.glow-box {
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.6),
+              inset 0 0 15px var(--hologram-blue);
+  transition: box-shadow 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.hover-glow:hover {
+  box-shadow: 0 0 30px var(--cyber-purple),
+              0 0 15px rgba(255, 255, 255, 0.8);
+}
+
+/* Cyber Border v2 
+.cyber-border {
+  position: relative;
+  background: linear-gradient(45deg, 
+    transparent 15%,
+    var(--neon-cyan) 50%,
+    transparent 85%
+  );
+  background-size: 200% 200%;
+  animation: cyberScan 6s linear infinite;
+}
+
+@keyframes cyberScan {
+  0% { background-position: 200% 200%; }
+  100% { background-position: -200% -200%; }
+}
+
+/* Holographic Scrollbar 
+::-webkit-scrollbar {
+  width: 10px;
+  background: linear-gradient(45deg, #0a0a0a, #1a1a1a);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, var(--neon-cyan), var(--cyber-purple));
+  border-radius: 6px;
+  border: 2px solid #0a0a0a;
+}
+
+/* Cyberpunk Animations 
+@layer utilities {
+  .animate-neon-pulse {
+    animation: neonPulse 1.5s ease-in-out infinite;
+  }
+
+  @keyframes neonPulse {
+    0%, 100% { opacity: 0.8; text-shadow: 0 0 10px var(--neon-cyan); }
+    50% { opacity: 1; text-shadow: 0 0 20px var(--neon-cyan), 0 0 30px var(--hologram-blue); }
+  }
+
+  .animate-cyber-spin {
+    animation: cyberSpin 4s linear infinite;
+  }
+
+  @keyframes cyberSpin {
+    0% { transform: rotate(0deg) scale(1); }
+    50% { transform: rotate(180deg) scale(1.2); }
+    100% { transform: rotate(360deg) scale(1); }
+  }
+}
+
+/* Glitch Text Effect 
+.text-glitch {
+  position: relative;
+}
+
+.text-glitch::before,
+.text-glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.8;
+}
+
+.text-glitch::before {
+  color: var(--cyber-purple);
+  animation: glitch 2s infinite linear;
+}
+
+.text-glitch::after {
+  color: var(--matrix-green);
+  animation: glitch 3s infinite linear reverse;
+}
+
+@keyframes glitch {
+  0% { transform: translate(0); }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(-2px, -2px); }
+  60% { transform: translate(2px, 2px); }
+  80% { transform: translate(2px, -2px); }
+  100% { transform: translate(0); }
+}
+
+/* Cyber Button 
+.cyber-button {
+  padding: 1rem 2rem;
+  border: 2px solid var(--neon-cyan);
+  background: linear-gradient(45deg, 
+    transparent 25%,
+    rgba(110, 231, 183, 0.2) 50%,
+    transparent 75%
+  );
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cyber-button:hover {
+  transform: translateY(-2px) skewX(-3deg);
+  box-shadow: 0 0 25px var(--neon-cyan),
+              inset 0 0 15px rgba(110, 231, 183, 0.3);
+}
+
+/* Holographic Card Effect 
+.hologram-card {
+  position: relative;
+  background: rgba(10, 10, 10, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(110, 231, 183, 0.3);
+}
+
+.hologram-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    45deg,
+    transparent 40%,
+    rgba(255, 255, 255, 0.1) 50%,
+    transparent 60%
+  );
+  animation: hologram 8s linear infinite;
+}
+
+@keyframes hologram {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 200% 200%; }
+}
+
+/* Modern Media Query Additions 
+@media (max-width: 768px) {
+  .cyber-border {
+    animation-speed: 8s;
+  }
+  
+  .glow-text {
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.7);
+  }
+}
+
+/* Enhanced Reveal Animation 
+.reveal {
+  opacity: 0;
+  transform: perspective(1000px) rotateX(15deg) translateY(30px);
+  transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: perspective(1000px) rotateX(0) translateY(0);
+}
+
+/* Dynamic Gradient Text 
+.text-gradient {
+  background: linear-gradient(
+    45deg,
+    var(--neon-cyan),
+    var(--cyber-purple),
+    var(--hologram-blue)
+  );
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gradientFlow 5s ease infinite;
+}
+
+/* Pixel Perfect Hover 
+.hover-scale {
+  transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.hover-scale:hover {
+  transform: scale(1.05) rotate(0.5deg);
+}
+*/
