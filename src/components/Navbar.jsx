@@ -6,7 +6,7 @@ export const Navbar = ({ menuOpen, setMenuOpen }) => {
   }, [menuOpen]);
   return (
     <nav className="fixed top-0 w-full z-40 bg-[rgba(0, 0, 0, 0.8)] backdrop-blur-lg border-b border-black/10 shadow-lg">
-      <div className="max-w-10xl mx-auto px-4">
+      <div className="max-w-10xl mx-auto px-10">
         <div className="flex justify-between items-center h-16">
           <a href="#home" className="font-mono text-xl font-bold text-white">
             {" "}
@@ -20,7 +20,7 @@ export const Navbar = ({ menuOpen, setMenuOpen }) => {
             &#9776;
           </div>
 
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-4">
             <a
               href="#home"
               className="text-white hove:text-white transition-colors"

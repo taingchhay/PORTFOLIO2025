@@ -73,12 +73,12 @@ export const About = () => {
               <h3 className="text-blue-400 font-bold mb-4"> 🏫 Education </h3>
               <ul className="list-disc list-inside text-gray-400 space-y-2">
                 <li>
-                  <strong> B.S. in Computer Science </strong> - XYZ University
-                  (2016-2020)
+                  <strong> B.S. in Computer Science </strong> - Cambodia Academy Of Digital Technology
+                  (2024-2027)
                 </li>
                 <li>
                   Relevant Coursework: Data Structures, Web Development, Cloud
-                  Computing...
+                  Computing.
                 </li>
               </ul>
             </div>
@@ -99,7 +99,7 @@ export const About = () => {
                 <div>
                   <h4 className="font-semibold">
                     {" "}
-                    Intern at DEF Startups (2019){" "}
+                    Intern at DEF Startups (2023){" "}
                   </h4>
                   <p>
                     Assisted in building front-end components and integration
